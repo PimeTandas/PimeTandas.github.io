@@ -150,8 +150,7 @@ a {
 	text-decoration: none;
 }
 
-/*-----Page Styles-----*/
-
+/*-------Header-------*/
 header {
 	position: fixed;
 	height: 100px;
@@ -162,11 +161,14 @@ header {
 	z-index: 9999;
 }
 
+/*-------Burger Menu-------*/
 .burger-menu {
 	position: absolute;
 	height: 30px;
+	top: 50px;
+	left: 50px;
 	transform: translate(-50%, 0);
-	transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: transform .75s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .burger-line {
@@ -187,19 +189,18 @@ header {
 	transform: rotate(-45deg) translateY(-6px);
 }
 
-/*-----Menu Styles-----*/
+/*-----Menu-----*/
 .menu {
 	position: fixed;
 	top: 0;
 	right: 0;
 	width: 50%;
 	height: 100%;
-	background-color: #fff;
 	padding: 40px 40px 0 40px;
+	background-color: #fff;
 	overflow-y: scroll;
 	transform: translateX(100%);
 	transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-
 	z-index: 998;
 }
 
@@ -207,13 +208,22 @@ header {
 	transform: translateX(0);
 }
 
+
+/*-----Menu Responsive-----*/
 @media screen and (max-width: 900px) {
 	div.menu {
 		width: 100vw;
-		padding: 40px;
+		padding: 40px 20px 0px 20px;
 	}
 }
 
+@media screen and (max-width: 450px) {
+	div.menu-footer{
+		font-size: 15px;
+	}
+}
+
+/*-----Menu Inner-----*/
 .container {
 	display: flex;
 	flex-direction: column;
@@ -222,15 +232,15 @@ header {
 }
 
 .container h2 {
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
 .container p {
-	margin-bottom: 40px;
+	margin-bottom: 60px;
 }
 
 .menu-footer {
-	padding: 40px 0;
+	padding: 0 0 40px 0;
 	align-items: center;
 	justify-content: space-between;
 	display: flex;
@@ -239,19 +249,31 @@ header {
 	letter-spacing: 0.5px;
 }
 
-@media screen and (max-width: 900px) {
-	div.menu div.container div.menu-footer {
-		padding: 30px 0;
-	}
+
+.logos{
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 60px;
 }
 
-.links a {
+
+
+
+
+
+
+
+
+
+
+
+.footer-links a {
 	color: #1d1d1d;
 	transition: color 0.3s ease;
 }
 
-.links a:hover,
-.links span {
+.footer-links a:hover,
+.footer-links span {
 	color: rgba(0, 0, 0, 0.1);
 }
 
